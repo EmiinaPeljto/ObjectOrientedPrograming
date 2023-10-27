@@ -19,12 +19,11 @@ public class Main {
         }
 
         //2.getByName
-        Optional<User> userOptional = data.getByName("Emina");
-        if (userOptional.isPresent()) {
-            User findUser = userOptional.get();
-            System.out.println(findUser);
-        } else {
+        Optional<User> userOptional = data.getByName("Becir");
+        if (userOptional.isEmpty()) {
             System.out.println("User not found");
+        } else {
+            System.out.println(userOptional.get().getName());
         }
 
         //3.findAgeGreaterThan

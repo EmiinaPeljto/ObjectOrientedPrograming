@@ -19,6 +19,7 @@ public class DataStructures {
     public List<User> getAll(){
         return this.users;
     }
+
     public Optional<User> getByName(String name){
         return users.stream()
                 .filter(user ->{ return user.getName().equals(name);})
@@ -54,11 +55,8 @@ public class DataStructures {
     }
 
     public void getbyGender(Gender gender){
-        users=users.stream()
+        users.stream()
                 .filter(user -> user.getGender().equals(gender))
-                .collect(Collectors.toList());
-        for (User u:users){
-            System.out.print(u.getName()+" ");
-        }
+                .forEach(y-> System.out.print(y.getName()+" "));
     }
 }
