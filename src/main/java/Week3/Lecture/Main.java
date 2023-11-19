@@ -32,6 +32,8 @@ public class Main {
             System.out.println(user.getName()+" "+user.getAge());
         }
 
+        
+
         //4.multiplyAge
         List<Integer> ma=data.multiplyAge();
         for (Integer number:ma){
