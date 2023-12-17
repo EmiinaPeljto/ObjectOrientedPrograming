@@ -69,6 +69,10 @@ class StudentSystem{
             System.out.println("Unable to read students");
         }
     }
+
+    public List<Student> getAllStudent(){
+        return this.students;
+    }
     public static List<Student> readStudent(String filename) throws IOException{
         List<Student> studentList=new ArrayList<Student>();
         BufferedReader bufferedReader=new BufferedReader(new FileReader(filename));
